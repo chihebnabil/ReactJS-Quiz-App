@@ -12,13 +12,13 @@ const Question = ({
       <ol type="a">
       {question.answers.map((answer, i) =>
         <li key={`${index}-${i}`}>
-          <input type="radio" name={`question_${index}`} id={`question_${index}_answer_${i}`} defaultChecked={false} value={i} onChange={onAnswerSelected} />
+          <input className="form-control"  type="radio" name={`question_${index}`} id={`question_${index}_answer_${i}`} defaultChecked={false} value={i} onChange={onAnswerSelected} />
           {' '}
           <label htmlFor={`question_${index}_answer_${i}`}>{answer.label}</label>
         </li>
       )}
       </ol>
-      <button onClick={onSubmit}>Submit</button>
+      <button className="btn btn-primary"  onClick={onSubmit}>Submit</button>
     </div>
   )
 }
