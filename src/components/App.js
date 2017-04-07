@@ -15,8 +15,9 @@ class App extends React.Component {
   componentDidMount() {
      axios.get('/quiz.json')
       .then(function (response) {
-        this.state.quiz = response.data
-      })
+        //this.state.quiz = response.data
+        this.setState({'quiz': response.data})
+      }.bind(this))
       .catch(function (error) {
         console.log(error);
       });
